@@ -8,9 +8,9 @@ let level = 0;
 let highscore =0;
 let h2 = document.querySelector("h2");
 
-document.addEventListener("keypress", function(){
+document.addEventListener("dblclick", function(){
     if(started == false){
-        console.log("game started");
+        console.log("game start");
         started = true;
         setTimeout(levelup, 1000);
     }
@@ -51,7 +51,7 @@ if(userSeq[idx] == gameSeq[idx]){
     levelup();
    }
 }else{
-    h2.innerHTML = `Game over! your score is <b>${level}<b><br> and high score ${highscore} is press any key to start`;
+    h2.innerHTML = `Game over! your score is <b>${level}<b><br> and high score ${highscore} is double click to start`;
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(function(){    
         document.querySelector("body").style.backgroundColor = "white";
